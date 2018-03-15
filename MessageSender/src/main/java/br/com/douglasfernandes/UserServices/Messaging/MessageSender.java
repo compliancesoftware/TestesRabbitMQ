@@ -24,7 +24,7 @@ public class MessageSender {
     @Qualifier("rabbitTemplate")
     private RabbitTemplate template;
 
-    public void send(String exchangeName, String queueName, String object) throws JsonProcessingException {
+    public void send(String exchangeName, String queueName, String object) {
         template.convertAndSend(exchangeName, queueName, object);
         log.info("M=send, I=Enviado mensagem para a Fila. QUEUE=" + queueName);
     }

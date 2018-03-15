@@ -20,7 +20,7 @@ public class MessageReceiver {
     @Autowired
     private ObjectMapper objectMapper;
 
-    public void receiveMessage(byte[] message) throws IOException {
-        System.out.println("Received <" + new String(message) + ">");
+    public void receiveMessage(String message) {
+        log.info("Received <" + message + ">");
     }
 }

@@ -64,11 +64,7 @@ public class UserController {
             response.setMessage(ex.getMessage());
         }
 
-        try {
-            messageSender.send("UserServicesExchange","UserServices", response.toString());
-        } catch(JsonProcessingException ex) {
-            ex.printStackTrace();
-        }
+        messageSender.send("UserServicesExchange","UserServices", response.toString());
 
         return response;
     }
