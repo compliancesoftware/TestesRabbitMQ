@@ -3,12 +3,6 @@ buildscript {
 		springBootVersion = "1.5.9.RELEASE"
 		lombokVersion = "1.16.8"
 		jacksonDatatypeVersion = "2.4.0"
-
-		//Framework de testes
-		junitVersion = '4.12'
-		mockitoVersion = '2.8.9'
-		cucumberVersion = '1.2.4'
-		gherkinVersion = '2.12.2'
 	}
 	repositories {
 		mavenCentral()
@@ -47,10 +41,4 @@ dependencies {
 
 	testCompile("org.springframework.boot:spring-boot-starter-test")
 	testCompile("org.springframework.security:spring-security-test")
-	testCompile("info.cukes:cucumber-jvm:${cucumberVersion}")
-	testCompile("info.cukes:cucumber-core:${cucumberVersion}")
-	testCompile("info.cukes:cucumber-java:${cucumberVersion}")
-	testCompile("info.cukes:cucumber-junit:${cucumberVersion}")
-	testCompile("info.cukes:cucumber-spring:${cucumberVersion}")
-	testCompile("info.cukes:gherkin:${gherkinVersion}")
 }
